@@ -1,0 +1,81 @@
+<div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+
+<div class="container-fluid">
+  <div class="col-12 center">
+    <div class="row">
+      <div class="col-3">
+      </div>
+      <div class="col-6 right-center" style="border-radius: 10px;background-color: lightgray">
+        <div id="form" class="text-black">
+          <form [formGroup]="coSoForm" (ngSubmit)="submit()" >
+            <div class="text-center">
+              <label><h1 style="color: black">Thêm Mới Cơ Sở </h1></label>
+            </div>
+            <input class="form-control form-control-lg" type="hidden" placeholder="Id"
+                   aria-label=".form-control-lg example" formControlName="id">
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Mã cơ sở"
+                     aria-label=".form-control-lg example" formControlName="maCoSo">
+            </div>
+            <div style="color: red"
+                 *ngIf="!coSoForm.controls.maCoSo?.valid&&(coSoForm.controls.maCoSo?.dirty||coSoForm.controls.maCoSo?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Tên Cơ Sở"
+                     aria-label=".form-control-lg example" formControlName="tenCoSo"
+                     (change)="checkCode($event.target.value)">
+            </div>
+            <div *ngIf="isExitsCode==true" style="color: red" class="validate">Tên cơ sở đã tồn tại.</div>
+            <div style="color: red"
+                 *ngIf="coSoForm.controls.tenCoSo.hasError('required')&&(coSoForm.controls.tenCoSo?.dirty||coSoForm.controls.tenCoSo?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="date" placeholder="Ngày khai trương"
+                     aria-label=".form-control-lg example" formControlName="ngayKhaiTruong">
+            </div>
+            <div style="color: red"
+                 *ngIf="!coSoForm.controls.ngayKhaiTruong?.valid&&(coSoForm.controls.ngayKhaiTruong?.dirty||coSoForm.controls.ngayKhaiTruong?.touched)">
+
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Địa chỉ"
+                     aria-label=".form-control-lg example" formControlName="diaChi">
+            </div>
+            <div style="color: red"
+                 *ngIf="!coSoForm.controls.diaChi?.valid&&(coSoForm.controls.diaChi?.dirty||coSoForm.controls.diaChi?.touched)">
+
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <!--select option-->
+            <div>
+              <select class="form-control form-control-lg" type="text"
+                      aria-label=".form-control-lg example" formControlName="nhanVien">
+                <option value="" disabled>--Chọn Nhân Viên Quản Lý--</option>
+                <option *ngFor="let item of nhanVienList" [ngValue]="item">{{item.tenNhanVien}}</option>
+              </select>
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <!--Nut luu-->
+            <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+            <button type="submit" class=" btn btn-success" [disabled]="!coSoForm.valid ">Lưu</button>
+            <button type="submit" style="margin-left: 5%" class=" btn btn-secondary" [routerLink]="'/CoSo/list'">Quay Lại</button>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+          </form>
+        </div>
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>

@@ -1,0 +1,107 @@
+<div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+
+<div class="container-fluid">
+  <div class="col-12 center">
+    <div class="row">
+      <!--Giữa-->
+      <div class="col-3">
+      </div>
+      <div class="col-6 right-center" style="border-radius: 10px;background-color: white">
+        <div id="form" class="text-black">
+          <label>
+            <h1 style="color: black">Sửa Thông Tin Bệnh Án </h1>
+          </label>
+          <form [formGroup]="patientForm" (ngSubmit)="update(id)" *ngIf="patientForm" novalidate>
+
+            <input class="form-control form-control-lg" type="hidden" placeholder="Id"
+                   aria-label=".form-control-lg example" formControlName="id">
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="MÃ BỆNH ÁN"
+                     aria-label=".form-control-lg example" formControlName="codePatient" disabled>
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.codePatient?.valid&&(patientForm.controls.codePatient?.dirty||patientForm.controls.codePatient?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <!--select option-->
+            <div>
+              <select class="form-control form-control-lg" type="text"
+                      aria-label=".form-control-lg example" formControlName="codePeoplePatient" [compareWith]="compare"
+                      disabled>
+                <option disabled *ngFor="let item of patientPeopleList" [ngValue]="item">{{item.codePeoplePatient}}</option>
+              </select>
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Ngày nhập viện"
+                     aria-label=".form-control-lg example" formControlName="dayStart">
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.dayStart?.valid&&(patientForm.controls.dayStart?.dirty||patientForm.controls.dayStart?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Ngày ra vện"
+                     aria-label=".form-control-lg example" formControlName="dayEnd">
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.dayEnd?.valid&&(patientForm.controls.dayEnd?.dirty||patientForm.controls.dayEnd?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Lý do"
+                     aria-label=".form-control-lg example" formControlName="reason">
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.reason?.valid&&(patientForm.controls.reason?.dirty||patientForm.controls.reason?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Phuong phap"
+                     aria-label=".form-control-lg example" formControlName="method">
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.method?.valid&&(patientForm.controls.method?.dirty||patientForm.controls.method?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Bác sĩ"
+                     aria-label=".form-control-lg example" formControlName="doctor">
+            </div>
+            <div style="color: red"
+                 *ngIf="!patientForm.controls.doctor?.valid&&(patientForm.controls.doctor?.dirty||patientForm.controls.doctor?.touched)">
+              Không được để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <div>
+              <input class="form-control form-control-lg" type="text" placeholder="Tên bệnh nhân"
+                     aria-label=".form-control-lg example" formControlName="namePeoplePatient">
+            </div>
+            <div style="color:red"
+                 *ngIf="!patientForm.controls.namePeoplePatient?.valid&&(patientForm.controls.namePeoplePatient?.dirty||patientForm.controls.namePeoplePatient?.touched)">
+              Không được chứa số và để trống
+            </div>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+            <!--Nut luu-->
+            <div class="vc_empty_space" style="height: 15px"><span class="vc_empty_space_inner"></span></div>
+            <button type="submit" class=" btn btn-success" [disabled]="!patientForm.valid ">Lưu</button>
+            <div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>
+          </form>
+        </div>
+      </div>
+      <div class="col-3">
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="vc_empty_space" style="height: 20px"><span class="vc_empty_space_inner"></span></div>

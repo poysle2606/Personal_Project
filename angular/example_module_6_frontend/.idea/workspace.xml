@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="72090bfd-68f8-47ed-9d1c-462accac5775" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../prototype/img/1-1598259623.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../prototype/img/anhHeo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../prototype/img/soil-association-pigs-1024x768.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../prototype/listCss.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../prototype/porkMeatList.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/src/main/java/com/example/controller/ExportPorkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/src/main/java/com/example/model/ExportPork.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/src/main/java/com/example/repository/IExportPorkRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/src/main/java/com/example/service/IExportPorkMeatService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../spring_boot/src/main/java/com/example/service/impl/ExportPorkMeatServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test_module_6/back_end/src/main/java/com/example/back_end/enity/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test_module_6/back_end/src/main/java/com/example/back_end/enity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../test_module_6/back_end/src/main/java/com/example/back_end/enity/Facility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Angular" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Angular" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module1/ss12_ OOP/thuc_hanh/objects" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module1/ss12_ OOP/thuc_hanh/objects" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module2/out/production/untitled104/GiaiThuat.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module2/out/production/untitled104/GiaiThuat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module3" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module4" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Module5" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Module5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2F9mIq7fRp6wzsOAVFFVzk2LrpX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example-angular" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="ts.external.directory.path" value="D:\C0322G1-LeHuuPhuongDong\Module6\angular\example_module_6_frontend\example-angular\node_modules\typescript\lib" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="72090bfd-68f8-47ed-9d1c-462accac5775" name="Default Changelist" comment="" />
+      <created>1663912596105</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663912596105</updated>
+      <workItem from="1663912598006" duration="441000" />
+      <workItem from="1663913286872" duration="41000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="116" key="FileChooserDialogImpl" timestamp="1663913326587">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="421" y="116" key="FileChooserDialogImpl/0.0.1280.720@0.0.1280.720" timestamp="1663913326587" />
+  </component>
+</project>

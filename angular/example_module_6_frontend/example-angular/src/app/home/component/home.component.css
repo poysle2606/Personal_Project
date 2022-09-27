@@ -1,0 +1,50 @@
+
+.x {
+  transition-duration: .5s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+}
+
+.x:hover {
+  transform: translateY(-10px);
+}
+
+a {
+  color: black !important;
+  font-weight: bold;
+}
+
+ul li {
+  font-family: Papyrus;
+  font-size: 30px;
+}
+
+
+.menu {
+  background-color: #21d192;
+  color: black !important;
+}
+
+* {
+  box-sizing: border-box !important;
+}
+
+.left-center {
+  height: 100%;
+}
+
+.right-center {
+  height: 100%;
+  border-radius: 20px;
+}
+
+ul li:hover {
+  color: white;
+  border-radius: 10px;
+}
+
+img {
+  width: border-box;
+  height: border-box;
+}
+
