@@ -1,0 +1,150 @@
+.carousel-right {
+  float: left;
+  width: 30%;
+  height: auto;
+}
+
+.carousel-left {
+  float: left;
+  width: 70%;
+  height: auto;
+}
+
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+
+.product-item {
+  transition: .5s;
+  width: 250px;
+  height: 500px;
+}
+
+.product-item:hover {
+  box-shadow: 0 0 30px #DDDDDD;
+}
+.bg-light {
+  background-color: #FFFFFF !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-h-100 {
+  width: 100% !important;
+  height: 350px;
+}
+
+.product-action {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .5s;
+}
+
+.product-action a.btn {
+  position: relative;
+  margin: 0 3px;
+  margin-top: 100px;
+  opacity: 0;
+}
+
+.product-item:hover .product-action a.btn:first-child {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s 0s;
+}
+.product-item:hover .product-action a.btn:nth-child(2) {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s .05s;
+}
+
+.product-item:hover .product-action {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.btn-square {
+  width: 50px;
+  height: 50px;
+}
+
+.btn-square {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-item .product-img img {
+  transition: .5s;
+}
+
+.product-item:hover .product-img img {
+  transform: scale(1.2);
+}
+
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  top: 50%;
+  left: 0;
+  border-top: 3px dashed #bec5cb;
+  z-index: -1;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.bg-secondary {
+  background-color: black !important;
+  color: white;
+}
+
+a.bg-secondary:hover, a.bg-secondary:focus,
+button.bg-secondary:hover,
+button.bg-secondary:focus {
+  background-color: gainsboro !important;
+}
+
+.pr-3 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
+}
+
+.py-4 {
+  padding-bottom: 1.5rem !important;
+  padding-top: 1.5rem !important;
+}
+
+.h6 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #3D464D;
+}
+
+

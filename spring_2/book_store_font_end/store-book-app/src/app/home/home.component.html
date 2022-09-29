@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-9 carousel-left mt-2" style="float: left">
+      <div id="carouselExampleControls " class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+          </div>
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img
+              src="https://product.hstatic.net/200000343865/product/sua-banner-1180x740-khong-l_ff53006f26d84cfa893adc584cba465b.png"
+              class="d-block w-100" height="564" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://product.hstatic.net/200000343865/product/banner_a2c801b268934e96a4a3ab885ef5ce24.png"
+                 class="d-block w-100" height="564" alt="...">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://theme.hstatic.net/1000373675/1000745929/14/blog_banner_2.png?v=10" class="d-block w-100"
+                 height="564">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="http://hovanvanmieu.vn/wp-content/uploads/2018/05/0AA00.png" class="d-block w-100" height="564"
+                 alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="col-lg-3 carousel-right mt-2" style="float: left; height: 564px">
+      <div>
+        <a href="">
+          <img src="http://1980books.vn/images/news/1980booksbirthday_tiki_800x800.jpg" class="rounded-4" height="275"
+               width="105%" alt="">
+        </a>
+      </div>
+      <div class="mt-3">
+        <a href="">
+          <img src="https://vnn-imgs-f.vgcloud.vn/2021/10/18/09/kho-sach-dong-gia-hoi-chi-co-o-shopee.jpg"
+               class="rounded-4" height="273" width="105%" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+<div class="mt-3">
+  <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Văn Học Việt Nam</span></h5>
+</div>
+  <div class="container">
+    <div class="row" style="margin-left: 30px">
+      <div class="col-lg-3 col-md-6 col-sm-6 pb-1" *ngFor="let book of literaryVn" >
+        <div class="product-item bg-light mb-4">
+          <div class="product-img position-relative overflow-hidden">
+            <img class="img-fluid w-h-100" src="{{book.imgUrl}}" alt="" height="100">
+            <div class="product-action">
+              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-eye"></i></a>
+            </div>
+          </div>
+          <div class="text-center py-4">
+            <a class="h6 text-decoration-none text-truncate" href="">{{book.name}}</a>
+            <div class="d-flex align-items-center justify-content-center mt-2">
+              <h5 style="color: red">{{book.price | currency  :' ' :true: '1.0-3'}}<span style="color: red">đ</span></h5>
+              <h6 class="text-muted ml-2 mx-2 ">
+                <del>{{book.price + 50000}}<span>đ</span></del>
+              </h6>
+            </div>
+            <h6 class="fa fa-eye"> {{book.view}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
