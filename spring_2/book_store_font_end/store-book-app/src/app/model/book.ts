@@ -1,3 +1,5 @@
+import {Category} from './category';
+
 export interface Book {
   id?: number;
   name?: string;
@@ -12,4 +14,5 @@ export interface Book {
   view?: number;
   imgUrl?: string;
   author?: string;
+  category?: Category;
 }

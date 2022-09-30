@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookService implements IBookService {
@@ -17,12 +18,33 @@ public class BookService implements IBookService {
     IBookRepository iBookRepository;
 
     @Override
-    public Page<Book> getAllBook(Pageable pageable) {
-        return iBookRepository.listAllBook(pageable);
+    public List<Book> getAllBook() {
+        return iBookRepository.listAllBook();
+    }
+
+    @Override
+    public Book findByIdBook(Integer id) {
+        return iBookRepository.findByIdBook(id);
+    }
+
+    @Override
+    public List<Book> getFourLiterary() {
+        return iBookRepository.topFourLiterary();
     }
 
     @Override
     public Page<Book> getHotLiterary(Pageable pageable) {
         return iBookRepository.listLiterary(pageable);
     }
+
+    @Override
+    public Page<Book> getHotLiteraryNational(Pageable Pageable) {
+        return iBookRepository.listLiteraryNational(Pageable);
+    }
+
+    @Override
+    public Page<Book> getHotLiteraryChildren(Pageable Pageable) {
+        return iBookRepository.listLiteraryChildren(Pageable);
+    }
+
 }

@@ -75,6 +75,12 @@
   transition: .3s .05s;
 }
 
+.product-item:hover .product-action a.btn:nth-child(3) {
+  opacity: 1;
+  margin-top: 0;
+  transition: .3s .05s;
+}
+
 .product-item:hover .product-action {
   background: rgba(255, 255, 255, 0.7);
 }
@@ -119,7 +125,7 @@
 }
 
 .bg-secondary {
-  background-color: black !important;
+  background-color: orange !important;
   color: white;
 }
 
@@ -145,6 +151,19 @@ button.bg-secondary:focus {
   font-weight: 700;
   line-height: 1.2;
   color: #3D464D;
+}
+.btn-more {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: orange;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-more:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 
