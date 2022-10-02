@@ -1,80 +1,95 @@
 <div class="container mt-4">
   <div class="row">
-      <div class="col-lg-5 col-sm-5 bg-light">
-        <div class="text-center mt-3">
-          <img class="img-fluid"
-               src="https://sudospaces.com/eshop/2021/08/2-nhat-ky-chu-be-nhut-nhat-tap-12-chuyen-di-bao-tap-the-getaway-song-ngu-1629688044-large.jpg"
-               alt="">
+    <div class="mt-3">
+      <div style="float: left; margin-left: 20px" class="mt-4">
+        <h3>CHI TIẾT SẢN PHẨM</h3>
+      </div>
+      <div style="float: right">
+           <span style="float: right;margin: 10px" [routerLink]="['']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-house"
+             viewBox="0 0 16 16">
+           <path fill-rule="evenodd"
+                 d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+            <path fill-rule="evenodd"
+                  d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+         </svg>
+      </span>
+      </div>
+    </div>
+    <div class="col-lg-5 col-sm-5 bg-light">
+      <div class="text-center mt-3">
+        <img class="img-fluid"
+             src="{{imgUrl}}"
+             alt="">
+      </div>
+      <div class="mt-3 mb-3">
+        <button class="btn-to-card" [routerLink]="['/cart']">Thêm vào giỏ hàng</button>
+        <button class="btn-to-buy">Mua ngay</button>
+      </div>
+    </div>
+    <div class="col-lg-7 col-sm-7 bg-light">
+      <div class="row">
+        <div class="text-center mt-2" style="height: 100px">
+          <h1>{{name}}</h1>
         </div>
-        <div class="mt-3 mb-3">
-          <button class="btn-to-card">Thêm vào giở hàng</button>
-          <button class="btn-to-buy">Mua ngay</button>
+        <hr style="border: 5px solid deepskyblue; border-radius: 5px">
+        <div class="col-lg-6">
+          <ul>
+            <li>
+              <b style="color: deepskyblue">Mã sản phẩm:</b> {{codeBook}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue">Tác giả:</b> {{author}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue"> Dịch giả:</b> {{translation}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue">Nhà Xuất bản:</b> {{production}}
+            </li>
+            <hr>
+          </ul>
+        </div>
+        <div class="col-lg-6">
+          <ul>
+            <li>
+              <b style="color: deepskyblue"> Số trang:</b> {{numberPages}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue"> Kích thước: </b> {{size}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue"> Ngày phát hành:</b> {{dateStart | date: 'dd-MM-yyyy'}}
+            </li>
+            <hr>
+            <li>
+              <b style="color: deepskyblue"> Quốc gia: </b>{{national}}
+            </li>
+            <hr>
+          </ul>
         </div>
       </div>
-      <div class="col-lg-7 col-sm-7 bg-light">
-        <div class="row">
-          <div class="text-center mt-2" style="height: 100px">
-            <h1>Tên sách</h1>
-          </div>
-          <hr style="border: 5px solid orange; border-radius: 5px">
-          <div class="col-lg-6">
-            <ul>
-              <li>
-                Mã sản phẩm:
-              </li>
-              <hr>
-              <li>
-                Tác giả:
-              </li>
-              <hr>
-              <li>
-                Dịch giả:
-              </li>
-              <hr>
-              <li>
-                Nhà Xuất bản:
-              </li>
-              <hr>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <ul>
-              <li>
-                Số trang:
-              </li>
-              <hr>
-              <li>
-                Kích thước:
-              </li>
-              <hr>
-              <li>
-                Ngày phát hành:
-              </li>
-              <hr>
-              <li>
-                Quốc gia:
-              </li>
-              <hr>
-            </ul>
-          </div>
-        </div>
-        <div style="float: left">
-          <span>Số lượng: </span>
-          <button class="btn-quality fa fa-minus"></button>
-          <span>1</span>
-          <button class="btn-quality fa fa-plus"></button>
-        </div>
-        <div class="d-flex align-items-center mt-1" style="float: left; margin-left: 100px">
-          <h2 class="money-to-pay">59.000đ</h2>
-          <h6 class="text-muted ml-2 mx-2 ">
-            <del>63.000<span>đ</span></del>
-          </h6>
-        </div>
-        <div style="clear:left">
-          <h5 style="color: red">Chính sách đổi trả: &nbsp; Đổi trả trong vòng 7 ngày.</h5>
-          <button class="btn-back mb-3 mt-3" [routerLink]="['']">Quay lại</button>
-        </div>
+      <div style="float: left">
+        <b style="color: deepskyblue">Số lượng: </b>
+        <button class="btn-quality fa fa-minus"></button>
+        <span>1</span>
+        <button class="btn-quality fa fa-plus"></button>
       </div>
+      <div class="d-flex align-items-center mt-1" style="float: left; margin-left: 100px">
+        <h2 class="money-to-pay">{{price | currency : ' ' : true: '1.0-3'}}</h2>
+        <h6 class="text-muted ml-2 mx-2 ">
+          <del>{{price + 15000 | currency : ' ' : true: '1.0-3'}}<span>đ</span></del>
+        </h6>
+      </div>
+      <div style="clear:left">
+        <h5 style="color: red">Chính sách đổi trả: &nbsp; Đổi trả trong vòng 7 ngày.</h5>
+      </div>
+    </div>
   </div>
 </div>
 

@@ -19,7 +19,7 @@ public interface IBookRepository extends JpaRepository<Book, Integer> {
     List<Book> topFourLiterary();
 
     @Query(value = "select * from Book  where `category_id`= 1 and is_deleted = 0",nativeQuery = true)
-    Page<Book> listLiterary(Pageable pageable );
+    Page<Book> listLiterary(Pageable pageable);
 
     @Query(value = "select * from Book  where `category_id`= 2 and is_deleted = 0",nativeQuery = true)
     Page<Book> listLiteraryNational(Pageable pageable );

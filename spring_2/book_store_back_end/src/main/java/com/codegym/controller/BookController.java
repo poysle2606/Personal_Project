@@ -74,6 +74,8 @@ public class BookController {
         return new ResponseEntity<>(getListCategory, HttpStatus.OK);
     }
 
+
+
     @GetMapping("/detail/{id}")
     public ResponseEntity<Book> findByIdBook(@PathVariable Integer id) {
         Book idBook = iBookService.findByIdBook(id);

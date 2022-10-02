@@ -8,16 +8,16 @@
   width: 230px;
   height: 50px;
   background-color: #FFFFFF;
-  border: 3px solid orange;
+  border: 3px solid deepskyblue;
   border-radius: 12px;
   margin: 10px;
-  color: orange;
+  color: deepskyblue;
   font-size: 20px;
 }
 
 .btn-to-card:hover {
   transform: scale(1.1);
-  background-color: orange;
+  background-color: deepskyblue;
   border: none;
   color: #FFFFFF;
 }
@@ -27,7 +27,7 @@
   font-family: "Droid Sans Mono Dotted";
   width: 230px;
   height: 50px;
-  background-color: orange;
+  background-color: deepskyblue;
   border-radius: 12px;
   border: none;
   color: white;
@@ -37,8 +37,8 @@
 .btn-to-buy:hover {
   transform: scale(1.1);
   background-color: #FFFFFF;
-  border: 3px solid orange;
-  color: orange;
+  border: 3px solid deepskyblue;
+  color: deepskyblue;
 }
 
 .btn-quality {
@@ -46,8 +46,8 @@
   width: 70px;
   height: 30px;
   background-color: #FFFFFF;
-  color: orange;
-  border: 1px solid orange;
+  color: deepskyblue;
+  border: 1px solid deepskyblue;
   border-radius: 15px;
 }
 
@@ -56,13 +56,8 @@
   color: red;
 }
 
-.btn-back {
-  width: 100px;
-  background-color: #FFFFFF;
-  border: 3px solid orange;
-  color: orange;
-  border-radius: 10px;
-  margin-left: 45%;
-}
 
+h3::first-letter {
+  color: deepskyblue;
+}
 

@@ -8,6 +8,8 @@ import { FooterComponent } from './footer/footer.component';
 import {HomeModule} from './home/module/home.module';
 import {HttpClientModule} from '@angular/common/http';
 import {DetailModule} from './detail/detail/detail.module';
+import {CartModule} from './cart/cart/cart.module';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -20,8 +22,10 @@ import {DetailModule} from './detail/detail/detail.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
+    FormsModule,
     HttpClientModule,
-    DetailModule
+    DetailModule,
+    CartModule
   ],
   providers: [],
   bootstrap: [AppComponent]

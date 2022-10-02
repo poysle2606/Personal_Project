@@ -1,13 +1,13 @@
 .carousel-right {
   float: left;
   width: 30%;
-  height: auto;
+  height: 505px;
 }
 
 .carousel-left {
   float: left;
   width: 70%;
-  height: auto;
+  height: 505px;
 }
 
 .pb-1 {
@@ -125,7 +125,7 @@
 }
 
 .bg-secondary {
-  background-color: orange !important;
+  background-color: deepskyblue !important;
   color: white;
 }
 
@@ -156,7 +156,7 @@ button.bg-secondary:focus {
   width: 200px;
   height: 30px;
   border-radius: 5px;
-  background-color: orange;
+  background-color: deepskyblue;
   border: none;
   color: #FFFFFF;
 }

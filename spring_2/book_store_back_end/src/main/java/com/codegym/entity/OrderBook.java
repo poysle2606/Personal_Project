@@ -11,6 +11,7 @@ public class OrderBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDate orderDay;
+    private Integer quality;
 
     @Column(columnDefinition = "BIT(1) DEFAULT 0")
     private Boolean isDeleted;
@@ -29,14 +30,23 @@ public class OrderBook {
     public OrderBook() {
     }
 
-    public OrderBook(Integer id, LocalDate orderDay, Boolean isDeleted, Book books,
-                     AppUser appUser, Set<OrderDetails> orderDetails) {
+    public OrderBook(Integer id, LocalDate orderDay, Integer quality, Boolean isDeleted,
+                     Book books, AppUser appUser, Set<OrderDetails> orderDetails) {
         this.id = id;
         this.orderDay = orderDay;
+        this.quality = quality;
         this.isDeleted = isDeleted;
         this.books = books;
         this.appUser = appUser;
         this.orderDetails = orderDetails;
+    }
+
+    public Integer getQuality() {
+        return quality;
+    }
+
+    public void setQuality(Integer quality) {
+        this.quality = quality;
     }
 
     public Integer getId() {
