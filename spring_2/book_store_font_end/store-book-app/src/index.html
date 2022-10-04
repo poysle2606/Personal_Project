@@ -7,8 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
 <body style="background-color: rgba(110,102,99,0.14)">
-  <app-root></app-root>
+<app-root></app-root>
+<script>
+  let items = document.querySelectorAll('.item');
+  document.addEventListener('scroll', (event) => {
+    items.forEach(item => {
+      if (item.offsetTop - window.scrollY < 250) {
+        item.classList.add('active');
+      }
+    });
+  });
+
+</script>
 </body>
 </html>

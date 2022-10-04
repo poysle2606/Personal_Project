@@ -9,7 +9,9 @@ import {HomeModule} from './home/module/home.module';
 import {HttpClientModule} from '@angular/common/http';
 import {DetailModule} from './detail/detail/detail.module';
 import {CartModule} from './cart/cart/cart.module';
-import {FormsModule} from '@angular/forms';
+import {SercurityModule} from './sercurity/sercurity/sercurity.module';
+import {ToastrModule} from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -22,10 +24,12 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    FormsModule,
     HttpClientModule,
     DetailModule,
-    CartModule
+    CartModule,
+    SercurityModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

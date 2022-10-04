@@ -7,6 +7,8 @@ import com.codegym.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +19,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping("/book-store")
+@RequestMapping("/api/public/book-store")
 public class BookController {
 
     @Autowired
@@ -45,6 +47,16 @@ public class BookController {
         return new ResponseEntity<>(getListLiterary, HttpStatus.OK);
     }
 
+    @GetMapping("/literary-vn-more")
+    public ResponseEntity<Page<Book>> getAllLiteraryVn(@PageableDefault(value = 8) Pageable pageable){
+
+        Page<Book> getListLiterary = iBookService.getHotLiterary(pageable);
+        if(getListLiterary.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(getListLiterary, HttpStatus.OK);
+    }
+
     @GetMapping("/literary-national")
     public ResponseEntity<Page<Book>> getCategoryLiteraryNational(@RequestParam(name = "page", defaultValue = "0") int page){
         Sort sort = Sort.by("view").descending();
@@ -53,6 +65,16 @@ public class BookController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(getListLiteraryNational, HttpStatus.OK);
+    }
+
+    @GetMapping("/literary-national-more")
+    public ResponseEntity<Page<Book>> getAllLiteraryNational(@PageableDefault(value = 8) Pageable pageable){
+
+        Page<Book> getListLiterary = iBookService.getHotLiteraryNational(pageable);
+        if(getListLiterary.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(getListLiterary, HttpStatus.OK);
     }
 
     @GetMapping("/literary-children")

@@ -27,10 +27,6 @@
   height: 231px
 }
 
-h3::first-letter {
-  color: deepskyblue;
-}
-
 td, th, form {
   font-family: "Gill Sans MT Ext Condensed Bold";
 }
@@ -49,4 +45,12 @@ td, th, form {
   background-color: deepskyblue;
   border: none;
   color: white;
+}
+
+.bg-title {
+  border-radius: 25px;
+  height: 50px;
+  width: 15%;
+  background-color: deepskyblue;
+  color: #FFFFFF;
 }

@@ -14,18 +14,27 @@ export class HomeService {
   constructor(private http: HttpClient) { }
 
   getLiteraryVn(): Observable<Book[]> {
-    return this.http.get<Book[]>(API_URL + `/literary-vn`);
+    return this.http.get<Book[]>(API_URL + `/book-store/literary-vn`);
+  }
+
+  getAllLiteraryVn(): Observable<Book[]> {
+    return this.http.get<Book[]>(API_URL + `/book-store/literary-vn-more`);
   }
 
   getLiteraryNational(): Observable<Book[]> {
-    return this.http.get<Book[]>(API_URL + `/literary-national`);
+    return this.http.get<Book[]>(API_URL + `/book-store/literary-national`);
   }
 
+  getAllLiteraryNational(): Observable<Book[]> {
+    return this.http.get<Book[]>(API_URL + `/book-store/literary-national-more`);
+  }
+
+
   getLiteraryChildren(): Observable<Book[]> {
-    return this.http.get<Book[]>(API_URL + `/literary-children`);
+    return this.http.get<Book[]>(API_URL + `/book-store/literary-children`);
   }
 
   getCategory(): Observable<Category[]> {
-    return this.http.get<Category[]>(API_URL + `/category`);
+    return this.http.get<Category[]>(API_URL + `/book-store/category`);
   }
 }

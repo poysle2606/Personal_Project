@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 .input-search {
   height: 40px;
   width: 400px;
@@ -5,4 +6,42 @@
 .text-category {
   font-family: "Droid Sans Mono Dotted";
   font-size: 18px;
+}
+.banner .title {
+  color: #FFFFFF;
+  text-shadow: 2px 4px 5px deepskyblue ;
+  height: 85px;
+  font-size: 13vh;
+  opacity: 0;
+  font-family: 'Great Vibes', cursive;
+  animation: showTitle 1s ease-in-out 0.3s 1 forwards;
+}
+.slogan {
+  color: #FFFFFF;
+  text-shadow: 2px 4px 4px deepskyblue ;
+  height: 40px;
+  font-size: 5vh;
+  opacity: 0;
+  font-family: 'Great Vibes', cursive;
+  animation: showTitle 1s ease-in-out 0.3s 1 forwards;
+}
+@keyframes showTitle {
+  from{
+    filter: blur(33px);
+    transform: translate(0%, -80%);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0%, 0%);
+  }
+}
+
+.gradient-custom {
+background-image: url("../../assets/backgound.jpg");
+}
+
+.navbar-brand img {
+  width: 190px;
+  height: 50px;
 }

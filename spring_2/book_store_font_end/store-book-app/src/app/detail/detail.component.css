@@ -1,10 +1,24 @@
-.img-fluid {
+* {
+  font-family: "Gill Sans MT Ext Condensed Bold";
+}
+
+.img-fluid-1 {
   max-width: 50%;
   height: auto;
+  animation: showImg 1s ease-in-out 1 forwards;
+}
+@keyframes showImg {
+  from{
+    transform: translate(-120%, 0%);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translate(0%, 0%);
+  }
 }
 
 .btn-to-card {
-  font-family: "Droid Sans Mono Dotted";
   width: 230px;
   height: 50px;
   background-color: #FFFFFF;
@@ -24,7 +38,6 @@
 
 .btn-to-buy {
   margin-left: 30px;
-  font-family: "Droid Sans Mono Dotted";
   width: 230px;
   height: 50px;
   background-color: deepskyblue;
@@ -56,8 +69,11 @@
   color: red;
 }
 
-
-h3::first-letter {
-  color: deepskyblue;
+.bg-title {
+  border-radius: 25px;
+  height: 50px;
+  width: 23%;
+  background-color: deepskyblue;
+  color: #FFFFFF;
 }
 

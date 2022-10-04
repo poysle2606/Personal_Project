@@ -16,7 +16,7 @@ public class AppUser {
     @Column(columnDefinition = "VARCHAR(45)")
     private String username;
 
-    @Column(columnDefinition = "VARCHAR(45)")
+    @Column(columnDefinition = "VARCHAR(255)")
     private String password;
 
     @Column(columnDefinition = "VARCHAR(45)")

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from '../model/book';
 import {HomeService} from '../service/home.service';
-import {Category} from '../model/category';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +11,6 @@ export class HomeComponent implements OnInit {
   literaryVn: Book[] = [];
   literaryNational: Book[] = [];
   literaryChildren: Book[] = [];
-  view: number;
   constructor(private literaryService: HomeService) { }
 
   ngOnInit(): void {
@@ -29,8 +27,24 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  getAll() {
+    this.literaryService.getAllLiteraryVn().subscribe((bookVn: any) => {
+      if (bookVn != null) {
+        this.literaryVn = bookVn.content;
+      }
+    });
+  }
+
   getLiteraryNational() {
     this.literaryService.getLiteraryNational().subscribe((book: any) => {
+      if (book != null) {
+        this.literaryNational = book.content;
+      }
+    });
+  }
+
+  getAllNational() {
+    this.literaryService.getAllLiteraryNational().subscribe((book: any) => {
       if (book != null) {
         this.literaryNational = book.content;
       }
@@ -43,9 +57,5 @@ export class HomeComponent implements OnInit {
         this.literaryChildren = book.content;
       }
     });
-  }
-
-  upHeart(view: number) {
-    this.view = view + 1;
   }
 }

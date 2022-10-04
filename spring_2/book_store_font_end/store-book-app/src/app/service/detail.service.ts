@@ -13,6 +13,6 @@ export class DetailService {
   constructor(private http: HttpClient) { }
 
   getDetailBook(id: number): Observable<Book> {
-    return this.http.get<Book>(API_URL + `/detail` + `/${id}` );
+    return this.http.get<Book>(API_URL + `/book-store/detail` + `/${id}` );
   }
 }
