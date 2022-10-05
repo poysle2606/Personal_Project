@@ -54,6 +54,42 @@
   color: deepskyblue;
 }
 
+.btn-to-edit {
+  width: 230px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border: 3px solid red;
+  border-radius: 12px;
+  margin: 10px;
+  color: red;
+  font-size: 20px;
+}
+
+.btn-to-edit:hover {
+  transform: scale(1.1);
+  background-color: red;
+  border: none;
+  color: #FFFFFF;
+}
+
+.btn-to-delete {
+  width: 230px;
+  height: 50px;
+  background-color: #FFFFFF;
+  border: 3px solid red;
+  border-radius: 12px;
+  margin: 10px;
+  color: red;
+  font-size: 20px;
+}
+
+.btn-to-delete:hover {
+  transform: scale(1.1);
+  background-color: red;
+  border: none;
+  color: #FFFFFF;
+}
+
 .btn-quality {
   margin: 20px;
   width: 70px;

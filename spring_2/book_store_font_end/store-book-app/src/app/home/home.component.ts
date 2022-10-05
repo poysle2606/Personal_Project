@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import {Book} from '../model/book';
 import {HomeService} from '../service/home.service';
+import {TokenStorageService} from '../service/toke-strorage.service';
+
+declare  var jQuery: any;
 
 @Component({
   selector: 'app-home',
@@ -11,12 +14,16 @@ export class HomeComponent implements OnInit {
   literaryVn: Book[] = [];
   literaryNational: Book[] = [];
   literaryChildren: Book[] = [];
-  constructor(private literaryService: HomeService) { }
+  cardClass = '';
+  role: string;
+  constructor(private literaryService: HomeService,
+              private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
     this.getLiteraryVn();
     this.getLiteraryNational();
     this.getLiteraryChildren();
+    this.auth();
   }
 
   getLiteraryVn() {
@@ -58,4 +65,16 @@ export class HomeComponent implements OnInit {
       }
     });
   }
+
+  auth() {
+    this.role = this.tokenStorageService.getUser().roles[0];
+  }
+
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(event: any) {
+  //   console.log(window.scrollY);
+  //   if (event.offsetTop - window.scrollY < 350) {
+  //       this.cardClass = 'active-slow';
+  //     }
+  // }
 }

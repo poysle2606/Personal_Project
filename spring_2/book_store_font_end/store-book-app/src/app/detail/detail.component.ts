@@ -3,6 +3,7 @@ import {Category} from '../model/category';
 import {Book} from '../model/book';
 import {DetailService} from '../service/detail.service';
 import {ActivatedRoute, ParamMap} from '@angular/router';
+import {TokenStorageService} from '../service/toke-strorage.service';
 
 @Component({
   selector: 'app-detail',
@@ -24,8 +25,10 @@ export class DetailComponent implements OnInit {
   imgUrl: string;
   author: string;
   category: Category;
+  role: string;
   constructor(private detailService: DetailService,
-              private activeRouter: ActivatedRoute) {
+              private activeRouter: ActivatedRoute,
+              private tokenStorageService: TokenStorageService) {
     this.activeRouter.paramMap.subscribe((paramMap: ParamMap) => {
       this.id = +paramMap.get('id');
       this.openDetail(this.id);
@@ -33,6 +36,7 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.auth();
   }
 
   openDetail(id: number) {
@@ -51,5 +55,9 @@ export class DetailComponent implements OnInit {
       this.author = book.author;
       this.category = book.category;
     });
+  }
+
+  auth() {
+    this.role = this.tokenStorageService.getUser().roles[0];
   }
 }

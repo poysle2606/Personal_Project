@@ -23,8 +23,10 @@
              alt="">
       </div>
       <div class="mt-3 mb-3">
-        <button class="btn-to-card" [routerLink]="['/cart']">Thêm vào giỏ hàng</button>
-        <button class="btn-to-buy">Mua ngay</button>
+        <button class="btn-to-card" [routerLink]="['/cart']" *ngIf="['ROLE_USER'].indexOf(role)!== -1">Thêm vào giỏ hàng</button>
+        <button class="btn-to-edit" [routerLink]="['/cart']" *ngIf="['ROLE_ADMIN'].indexOf(role)!== -1">Cập nhật</button>
+        <button class="btn-to-delete" *ngIf="['ROLE_ADMIN'].indexOf(role)!== -1">Xóa</button>
+        <button class="btn-to-buy" *ngIf="['ROLE_USER'].indexOf(role)!== -1">Mua ngay</button>
       </div>
     </div>
     <div class="col-lg-7 col-sm-7 bg-light mt-2">

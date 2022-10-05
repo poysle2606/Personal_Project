@@ -165,3 +165,22 @@ button.bg-secondary:focus {
   transform: scale(1.1);
   transition: 0.3s;
 }
+
+/*.show-to-top {*/
+/*  opacity: 0;*/
+/*}*/
+
+/* .show-to-top {*/
+/*  background-color: #9F391A;*/
+/*  animation:show-top 1s ease-in-out 1 forwards;*/
+/*}*/
+
+/*@keyframes show-top {*/
+/*  from {*/
+/*    opacity: 0;*/
+/*    transform: translate(0, 100px);*/
+/*  } to {*/
+/*        opacity: 1;*/
+/*        transform: translate(0, 0);*/
+/*      }*/
+/*}*/

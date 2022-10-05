@@ -1,88 +1,49 @@
-:root {
-  --input-padding-x: 1.5rem;
-  --input-padding-y: .75rem;
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-
-.body {
-  margin: 0;
-  padding: 0;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  min-height: 100vh;
-  width: 100%
+.login {
+  width: 320px;
+  height: 450px;
+  border: 1px solid #CCC;
+  background: url(https://media4.giphy.com/media/BHNfhgU63qrks/giphy.gif) center center no-repeat;
+  background-size: cover;
+  margin: 30px auto;
+  border-radius: 20px;
 }
-
-a {
-  text-decoration: none;
-}
-
-.btn-close {
-  border: 1px solid;
-  border-radius: 22px;
-  padding: 10px;
-}
-
-.card-title {
-  font-weight: bolder !important;
-}
-
-.card-signin {
-  border: 0;
-  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.5);
-}
-
-.card-signin .card-title {
-  margin-bottom: 1rem;
-  font-weight: 300;
-  font-size: 1.5rem;
-}
-
-.card-signin .card-body {
-  padding: 1rem;
-}
-
-.form-signin {
+.login .form {
   width: 100%;
+  height: 100%;
+  padding: 15px 25px;
 }
-
-.form-signin .btn {
-  margin-top: 10px;
-  letter-spacing: .1rem;
-  padding: 0.5rem;
-  transition: all 0.2s;
+.form h2 {
+  color: #FFF;
+  text-align: center;
+  font-weight: normal;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.login .form .form-label-group input {
   width: 100%;
+  height: 35px;
+  margin-top: 20px;
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0 15px;
+  color: #FFF;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
-.form-label-group {
-  position: relative;
-  margin-bottom: 1rem;
+::-webkit-input-placeholder {
+  color: #DDD;
 }
-
-.form-label-group input {
-}
-
-.btn-google {
-  color: white;
-  background-color: #ea4335;
-}
-
-.btn-facebook {
-  color: white;
-  background-color: #3b5998;
-}
-
-.error-place {
-  height: 15px;
-}
-
-@media screen and (min-width: 320px) {
-  .map {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .map {
-    width: 600px;
-  }
+.submit {
+  background: rgba(255,255,255,.9);
+  color: #444;
+  font-size: 15px;
+  margin-top: 20px;
+  font-weight: bold;
+  width: 100%;
 }

@@ -1,32 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-.input-search {
-  height: 40px;
-  width: 400px;
+
+.navbar {
+height: 50px;
 }
-.text-category {
-  font-family: "Droid Sans Mono Dotted";
-  font-size: 18px;
-}
+
 .banner .title {
+  margin-top: 10px;
   color: #FFFFFF;
-  text-shadow: 2px 4px 5px deepskyblue ;
+  text-shadow: 2px 4px 5px deepskyblue;
   height: 85px;
   font-size: 13vh;
   opacity: 0;
   font-family: 'Great Vibes', cursive;
   animation: showTitle 1s ease-in-out 0.3s 1 forwards;
 }
+
 .slogan {
   color: #FFFFFF;
-  text-shadow: 2px 4px 4px deepskyblue ;
+  text-shadow: 2px 4px 4px deepskyblue;
   height: 40px;
   font-size: 5vh;
   opacity: 0;
   font-family: 'Great Vibes', cursive;
   animation: showTitle 1s ease-in-out 0.3s 1 forwards;
 }
+
 @keyframes showTitle {
-  from{
+  from {
     filter: blur(33px);
     transform: translate(0%, -80%);
   }
@@ -38,10 +38,114 @@
 }
 
 .gradient-custom {
-background-image: url("../../assets/backgound.jpg");
+  background-image: url("../../assets/backgound.jpg");
 }
 
-.navbar-brand img {
-  width: 190px;
-  height: 50px;
+.title-header {
+  margin-left: 5px;
+  text-align: center;
+  color: deepskyblue;
+}
+
+.text-responsive {
+  -webkit-animation: my 900ms infinite;
+  -moz-animation: my 900ms infinite;
+  -o-animation: my 900ms infinite;
+  animation: my 900ms infinite;
+}
+
+@-webkit-keyframes my {
+  0% {
+    color: deepskyblue;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: deepskyblue;
+  }
+}
+
+@-moz-keyframes my {
+  0% {
+    color: deepskyblue;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: deepskyblue;
+  }
+}
+
+@-o-keyframes my {
+  0% {
+    color: deepskyblue;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: deepskyblue;
+  }
+}
+
+@keyframes my {
+  0% {
+    color: deepskyblue;
+  }
+  50% {
+    color: black;
+  }
+  100% {
+    color: deepskyblue;
+  }
+}
+
+.search {
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  display: flex;
+  border-radius: 30px;
+  margin-left: 3%;
+  overflow: hidden;
+  box-shadow: inset 0 5px 5px #CED0DF,
+  0 -5px 10px #F3F3F3,
+  inset 0 -5px 5px #EFF1F0,
+  0 10px 15px #CDD4DE;
+  transition: 1s;
+}
+
+.search i {
+  padding: 4px;
+  color: #697889;
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 330px;
+  padding: 0 20px;
+  transform: translate(-50px);
+}
+
+.search:focus-within {
+  width: 400px;
+}
+
+.search:focus-within input{
+  transform: translate(0px);
+}
+
+input~i {
+  opacity: 0;
+  transition: 0.5s;
+  transform: translate(50px);
+}
+
+input:valid ~ i{
+  opacity: 1;
+  transform: translate(0px);
 }
